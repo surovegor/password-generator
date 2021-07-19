@@ -1,0 +1,41 @@
+body {
+    background: #f1f5f8;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.app {
+    font-size: 16px;
+    border: 1px solid rgb(196, 196, 196);
+    border-radius: .5rem;
+    max-width: 1000px;
+    min-height: 500px;
+    margin: 8rem auto;
+    background-color: #fff;
+}
+.app__header {
+    text-align: center;
+    border-bottom: 1px solid rgb(196, 196, 196);
+    padding: 1rem 0;
+    h1 {
+        color: rgb(37, 37, 37);
+    }
+}
+.customize {
+    display: flex;
+    justify-content: space-between;
+}
+.customize__block {
+    width: 100%;
+}
+.error__item {
+    text-align: center;
+    color: rgb(255, 0, 0);
+    font-size: 18px;
+}
+.error {
+    padding: .5rem 0;
+    border: 1px solid rgb(255, 0, 0);
+}
