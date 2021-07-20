@@ -1,5 +1,6 @@
 body {
     background: #f1f5f8;
+    font-family: 'Nunito', sans-serif;
 }
 * {
     margin: 0;
@@ -14,6 +15,7 @@ body {
     min-height: 500px;
     margin: 8rem auto;
     background-color: #fff;
+    box-shadow: 0 0 1rem rgb(199, 199, 199);
 }
 .app__header {
     text-align: center;
@@ -21,14 +23,21 @@ body {
     padding: 1rem 0;
     h1 {
         color: rgb(37, 37, 37);
+        font-weight: 700;
+        letter-spacing: .3rem;
     }
 }
 .customize {
     display: flex;
     justify-content: space-between;
+    padding: .5rem 1rem;
+    border-bottom: 1px solid #c4c4c4;
+    border-top: 1px solid #c4c4c4;
 }
 .customize__block {
     width: 100%;
+    display: flex;
+    justify-content: center;
 }
 .error__item {
     text-align: center;
@@ -38,4 +47,127 @@ body {
 .error {
     padding: .5rem 0;
     border: 1px solid rgb(255, 0, 0);
+    opacity: 0;
+    transition: .3s;
+}
+.mod__title {
+    text-align: center;
+    margin: .5rem 0 1.2rem;
+}
+.customize__number {
+    outline: none;
+    border: 1px solid rgb(66, 66, 66);
+    height: 30px;
+    width: 60px;
+    border-radius: 6px;
+    font-size: 20px;
+    text-align: center;
+}
+.customize__range {
+    margin-left: 1rem;
+    vertical-align: middle;
+    cursor: pointer;
+    width: 300px;
+    appearance: none;
+}
+.customize__range::-webkit-slider-runnable-track {
+    border-radius: 10px;
+    height: 10px;
+    border: 1px solid rgb(180, 180, 180);
+    background-color: rgb(236, 236, 236);
+}
+
+.customize__range::-webkit-slider-thumb {
+    background: #0175ff;
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    appearance: none;
+    margin-top: -4px;
+    border-radius: 10px;
+}
+.customize__number::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+.customize-cover {
+    width: 100%;
+}
+.mod__element {
+    position: relative;
+    margin-bottom: .7rem;
+}
+.mod__checkbox {
+    appearance: none;
+    position: absolute;
+}
+.mod__label {
+    color: rgb(41, 41, 41);
+    font-size: 18px;
+    padding-left: 35px;
+    cursor: pointer;
+}
+.mod__label:before {
+    content: "";
+    display: block;
+    width: 22px;
+    height: 22px;
+    border: 1px solid rgb(70, 70, 70);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    border-radius: 5px;
+    transition: background .1s linear, border .1s linear;
+}
+.mod__label:after {
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url("/img/check.svg") no-repeat;
+    background-size: 16px 16px;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity .2s linear;
+}
+.mod__checkbox:checked + .mod__label:before {
+    background-color: #0175ff;
+    border-color: #0175ff;
+}
+.mod__checkbox:checked + .mod__label:after {
+    opacity: 1;
+}
+.block-generate {
+    display: flex;
+    justify-content: center;
+}
+.block-generate__button {
+    width: 200px;
+    display: block;
+    margin: 30px auto 30px auto;
+    appearance: none;
+    border: 1px solid #0175ff;
+    background-color: #0175ff;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px;
+    border-radius: 10px;
+    letter-spacing: 3px;
+    font-size: 18px;
+    cursor: pointer;
+}
+.block-generate__button:hover {
+    border: 1px solid #2085ff;
+    background-color: #2085ff;
+}
+.block-generate__input {
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    border:1px solid rgb(161, 161, 161);
+    outline-color: #0175ff;
 }

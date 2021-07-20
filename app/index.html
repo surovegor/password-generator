@@ -5,7 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Password generator</title>
+    <meta name="description" content="Герератор паролей, позволяющий создать пароль любой сложности, на основе различных настроек">
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="app">
@@ -18,40 +22,46 @@
             </div>
             <div class="customize">
                 <div class="customize__block">
-                    <h3>Длина пароля</h3>
-                    <input type="number">
-                    <input type="range">
+                    <div class="mod">
+                        <h3 class="mod__title">Длина пароля</h3>
+                        <div class="customize-cover">
+                            <input type="number" class="customize__number" value="10">
+                            <input type="range" class="customize__range" min="1" max="100" value="10" step="1">
+                        </div>
+                    </div>
                 </div>
 
-                <div class="customize__block mod">
-                    <h3>Настройка</h3>
-                    <div class="mod__element">
-                        <input type="checkbox">
-                        <label>Заглавные буквы</label>
-                    </div>
-
-                    <div class="mod__element">
-                        <input type="checkbox">
-                        <label>Строчные буквы</label>
+                <div class="customize__block">
+                    <div class="mod">
+                        <h3 class="mod__title">Настройка</h3>
+                        <div class="mod__element">
+                            <input type="checkbox" class="mod__checkbox" id="check1">
+                            <label for="check1" class="mod__label">Заглавные буквы</label>
                         </div>
 
-                    <div class="mod__element">
-                        <input type="checkbox">
-                        <label>Цифры</label>
-                    </div>
+                        <div class="mod__element">
+                            <input type="checkbox" class="mod__checkbox" id="check2">
+                            <label for="check2" class="mod__label">Строчные буквы</label>
+                        </div>
 
-                    <div class="mod__element">
-                        <input type="checkbox">
-                        <label>Спец. символы</label>
+                        <div class="mod__element">
+                            <input type="checkbox" class="mod__checkbox" id="check3">
+                            <label for="check3" class="mod__label">Цифры</label>
+                        </div>
+
+                        <div class="mod__element">
+                            <input type="checkbox" class="mod__checkbox" id="check4">
+                            <label for="check4" class="mod__label">Спец. символы</label>
+                        </div>
                     </div>
                 </div>
-
             </div>
-
             <div class="block-generate">
-                <button>Генерировать</button>
-                <input>
-                <label></label>
+                <div>
+                    <button class="block-generate__button">Генерировать</button>
+                    <input class="block-generate__input">
+                    <label class="block-generate__label"></label>
+                </div>
             </div>
         </main>
     </div>
