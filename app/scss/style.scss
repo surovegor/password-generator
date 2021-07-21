@@ -130,7 +130,7 @@ input::-webkit-inner-spin-button {
     display: block;
     width: 16px;
     height: 16px;
-    background: url("/img/check.svg") no-repeat;
+    background: url("../img/check.svg") no-repeat;
     background-size: 16px 16px;
     position: absolute;
     top: 4px;
@@ -180,7 +180,7 @@ input::-webkit-inner-spin-button {
 }
 .block-generate__label::after {
     content: "";
-    background: url("/img/copy.svg") no-repeat;
+    background: url("../img/copy.svg") no-repeat;
     background-size: 30px 30px;
     width: 30px;
     height: 30px;
