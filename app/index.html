@@ -17,7 +17,7 @@
             <h1>Password generator</h1>
         </header>
         <main class="app__content">
-            <div class="error">
+            <div class="error" id="error">
                 <p class="error__item">Ошибка! Выберете хотя бы один пункт настроек</p>
             </div>
             <div class="customize">
@@ -25,8 +25,8 @@
                     <div class="mod">
                         <h3 class="mod__title">Длина пароля</h3>
                         <div class="customize-cover">
-                            <input type="number" class="customize__number" value="10">
-                            <input type="range" class="customize__range" min="1" max="100" value="10" step="1">
+                            <input type="number" class="customize__number" value="10" id="inputScreen" oninput="updateRange()">
+                            <input type="range" class="customize__range" min="1" max="100" value="10" step="1" id="inputRange" oninput="updateScreen()">
                         </div>
                     </div>
                 </div>
@@ -58,9 +58,11 @@
             </div>
             <div class="block-generate">
                 <div>
-                    <button class="block-generate__button">Генерировать</button>
-                    <input class="block-generate__input">
-                    <label class="block-generate__label"></label>
+                    <button class="block-generate__button" id="build">Генерировать</button>
+                    <div class="result">
+                        <input class="block-generate__input" id="result" type="text">
+                        <label class="block-generate__label" for="result" id="copy"></label>
+                    </div>
                 </div>
             </div>
         </main>
