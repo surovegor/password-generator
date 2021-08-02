@@ -21,7 +21,7 @@ body {
 .app__header {
     text-align: center;
     padding: 1rem 0;
-    background-color: #0175ff;
+    background-color: #026beb;
     border-radius: .5rem;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
@@ -35,8 +35,8 @@ body {
     display: flex;
     justify-content: space-between;
     padding: .5rem 1rem;
-    border-bottom: 1px solid #0175ff;
-    border-top: 1px solid #0175ff;
+    border-bottom: 1px solid #026beb;
+    border-top: 1px solid #026beb;
 }
 .customize__block {
     width: 100%;
@@ -62,7 +62,7 @@ body {
 .customize__number {
     outline: none;
     border: 1px solid rgb(129, 129, 129);
-    height: 30px;
+    height: 40px;
     width: 60px;
     border-radius: 6px;
     font-size: 20px;
@@ -77,16 +77,15 @@ body {
 }
 .customize__range::-webkit-slider-runnable-track {
     border-radius: 10px;
-    height: 10px;
+    height: 12px;
     border: 1px solid rgb(180, 180, 180);
     background-color: rgb(236, 236, 236);
 }
-
 .customize__range::-webkit-slider-thumb {
     background: #0175ff;
     cursor: pointer;
-    width: 16px;
-    height: 16px;
+    width: 18px;
+    height: 18px;
     appearance: none;
     margin-top: -4px;
     border-radius: 10px;
@@ -140,8 +139,8 @@ input::-webkit-inner-spin-button {
     transition: opacity .2s linear;
 }
 .mod__checkbox:checked + .mod__label:before {
-    background-color: #0175ff;
-    border-color: #0175ff;
+    background-color: #026beb;
+    border-color: #026beb;
 }
 .mod__checkbox:checked + .mod__label:after {
     opacity: 1;
@@ -155,8 +154,8 @@ input::-webkit-inner-spin-button {
     display: block;
     margin: 30px auto 20px auto;
     appearance: none;
-    border: 1px solid #0175ff;
-    background-color: #0175ff;
+    border: 1px solid #026beb;
+    background-color: #026beb;
     color: #fff;
     font-weight: 700;
     padding: 12px;
@@ -174,7 +173,7 @@ input::-webkit-inner-spin-button {
     height: 40px;
     border-radius: 5px;
     border:1px solid rgb(161, 161, 161);
-    outline-color: #0175ff;
+    outline-color: #026beb;
     text-align: center;
     font-size: 20px;
 }
@@ -192,10 +191,77 @@ input::-webkit-inner-spin-button {
 .result {
     display: flex;
 }
-
-
-
-
+@media screen and (max-width: 1000px) {
+    .app {
+        box-shadow: none;
+        border-radius: 0;
+        margin: 0;
+    }
+    .app__header {
+        border-radius: 0;
+    }
+    .customize {
+        padding: 0 5px;
+    }
+    .customize-cover {
+        display: flex;
+        flex-direction: column;
+    }
+    .customize__number {
+        margin: 0 auto;
+        margin-bottom: 16px;
+        height: 40px;
+        width: 100px;
+    }
+    .customize__range {
+        margin: 0;
+    }
+}
+@media screen and (max-width: 650px) {
+    .customize__range {
+        max-width: 200px;
+    }
+    .app__header h1 {
+        letter-spacing: .1rem;
+        font-size: 24px;
+    }
+    .error__item {
+        font-size: 16px;
+    }
+    .app__header {
+        padding: .4rem 0;
+    }
+    .block-generate__input {
+        max-width: 350px;
+    }
+    .app {
+        min-height: 450px;
+    }
+}
+@media screen and (max-width: 420px) {
+    .customize {
+        flex-direction: column;
+    }
+    .app {
+        min-height: 570px;
+    }
+    .block-generate__input {
+        max-width: 250px;
+    }
+}
+@media screen and (max-width: 300px) {
+    .customize__number {
+        font-size: 16px;
+        height: 30px;
+        width: 60px;
+    }
+    .block-generate__input {
+        max-width: 200px;
+    }
+    .app {
+        min-height: 590px;
+    }
+}
 
 
 
