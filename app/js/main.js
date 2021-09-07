@@ -9,25 +9,25 @@ const modUppercase = document.getElementById("check1"),
     error = document.getElementById("error"),
     copy = document.getElementById("copy");
 
-updateScreen = () => {
+const updateScreen = () => {
     inputScreen.value = inputRange.value;
     updateValue();
 }
 
-updateRange = () => {
+const updateRange = () => {
     inputRange.value = inputScreen.value;
     updateValue();
 }
 
-updateValue = () => {
+const updateValue = () => {
     if (inputScreen.value > 100)
         inputScreen.value = 100;
     else if (inputScreen.value < 1)
         inputScreen.value = 1;
 }
 
-getDataMod = () => {
-    let modDataStart = [modUppercase, modLowercase, modNumbers, modSymbols],
+const getDataMod = () => {
+    const modDataStart = [modUppercase, modLowercase, modNumbers, modSymbols],
         modDataFinal = [];
 
     for (let i = 0; i < modDataStart.length; i++)
@@ -36,7 +36,7 @@ getDataMod = () => {
     return modDataFinal;
 }
 
-getfinalData = (data) => {
+const getfinalData = (data) => {
     finalData = []
     if (data[0] == true)
         finalData.push('A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z')
